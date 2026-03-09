@@ -1,0 +1,125 @@
+* {
+  font-family: system-ui;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg-dark: oklch(0.1 0.04 243);
+  --bg: oklch(0.15 0.04 243);
+  --bg-light: oklch(0.2 0.04 243);
+  --text: oklch(0.96 0.08 243);
+  --text-muted: oklch(0.76 0.08 243);
+  --highlight: oklch(0.5 0.08 243);
+  --border: oklch(0.4 0.08 243);
+  --border-muted: oklch(0.3 0.08 243);
+  --primary: oklch(0.76 0.1 243);
+  --secondary: oklch(0.76 0.1 63);
+  --danger: oklch(0.7 0.08 30);
+  --warning: oklch(0.7 0.08 100);
+  --success: oklch(0.7 0.08 160);
+  --info: oklch(0.7 0.08 260);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.8em;
+}
+
+h3 { 
+  font-size: 1.6em;
+}
+
+h4 {
+  font-size: 1.4em;
+}
+
+h5 {
+  font-size: 1.2em;
+}
+
+h6 {
+  font-size: 1em;
+}
+
+p + p {
+  margin-top: .5rem;
+}
+
+body {
+  display: flex;
+  flex-flow: column nowrap;
+  /*justify-content: space-between;*/
+  min-height: 100vh;
+
+  color: var(--text);
+  background-color: var(--bg-dark);
+}
+
+body.light {
+  --bg-dark: oklch(0.92 0 243);
+  --bg: oklch(0.96 0 243);
+  --bg-light: oklch(1 0 243);
+  --text: oklch(0.15 0 243);
+  --text-muted: oklch(0.4 0 243);
+  --highlight: oklch(1 0 243);
+  --border: oklch(0.6 0 243);
+  --border-muted: oklch(0.7 0 243);
+  --primary: oklch(0.4 0.1 243);
+  --secondary: oklch(0.4 0.1 63);
+  --danger: oklch(0.5 0.05 30);
+  --warning: oklch(0.5 0.05 100);
+  --success: oklch(0.5 0.05 160);
+  --info: oklch(0.5 0.05 260);
+}
+
+header {
+  background-color: var(--bg);
+  margin-bottom: 1rem;
+}
+
+menu#header {
+  display: flex;
+  gap: 2rem;
+  margin: 1rem;
+}
+
+menu > li {
+  list-style: none;
+}
+
+menu > li:first-child {
+  margin-left: auto;
+}
+
+menu > li:last-child {
+  margin-right: auto;
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  min-width: max(720px, 50%);
+  border-radius: 5px;
+
+  background-color: var(--bg-light);
+}
+
+footer {
+  margin-top: auto;
+  padding: 1rem 0;
+
+  background-color: var(--bg);
+
+  font-size: x-small;
+  text-align: center;
+}
