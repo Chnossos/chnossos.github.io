@@ -1,9 +1,3 @@
-* {
-  font-family: system-ui;
-  margin: 0;
-  padding: 0;
-}
-
 :root {
   --bg-dark: oklch(0.1 0.04 243);
   --bg: oklch(0.15 0.04 243);
@@ -19,6 +13,15 @@
   --warning: oklch(0.7 0.08 100);
   --success: oklch(0.7 0.08 160);
   --info: oklch(0.7 0.08 260);
+
+  font-family: system-ui;
+  font-size: 1rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  color: var(--text);
 }
 
 a {
@@ -44,27 +47,27 @@ h6:not(:first-child) {
 }
 
 h1 {
-  font-size: 2em;
+  font-size: 2.2rem;
 }
 
 h2 {
-  font-size: 1.8em;
+  font-size: 2rem;
 }
 
 h3 { 
-  font-size: 1.6em;
+  font-size: 1.8rem;
 }
 
 h4 {
-  font-size: 1.4em;
+  font-size: 1.6rem;
 }
 
 h5 {
-  font-size: 1.2em;
+  font-size: 1.4rem;
 }
 
 h6 {
-  font-size: 1em;
+  font-size: 1.2rem;
 }
 
 p + p {
@@ -74,7 +77,6 @@ p + p {
 body {
   display: flex;
   flex-flow: column nowrap;
-  /*justify-content: space-between;*/
   min-height: 100vh;
 
   color: var(--text);
@@ -99,56 +101,60 @@ body.light {
   --shadow: 0px 2px 2px oklch(0 0 0 / 0.2), 0px 4px 4px oklch(0 0 0 / 0.1);
 }
 
-header {
+#body-header {
   background-color: var(--bg);
-  margin-bottom: 1rem;
 }
 
-menu#header {
+#body-header > menu {
   display: flex;
   gap: 2rem;
   margin: 1rem;
 }
 
-menu > li {
+#body-header > menu > li {
   list-style: none;
 }
 
-menu > li:first-child {
+#body-header > menu > li:first-child {
   margin-left: auto;
 }
 
-menu > li:last-child {
+#body-header > menu > li:last-child {
   margin-right: auto;
 }
 
-#content {
+#body-content {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
 
-  min-width: max(720px, 50%);
-  margin: 0 auto;
-  padding: 1rem 1.5rem;
-  border-radius: .5rem;
-
-  background-color: var(--bg-light);
-  box-shadow: var(--shadow);
+  max-width: min(896px, 66%);
+  margin: 2rem auto;
 }
 
-body > footer {
+#body-footer {
   margin-top: auto;
   padding: 1rem 0;
 
   background-color: var(--bg);
 
-  font-size: x-small;
+  font-size: smaller;
   text-align: center;
+}
+
+#body-content > article {
+  background-color: var(--bg-light);
+  box-shadow: var(--shadow);
+  padding: 1rem 1.5rem;
+  border-radius: .5rem;
 }
 
 .article-tags {
   display: flex;
   flex-flow: row wrap;
   gap: .5rem;
+  
   margin-bottom: 1rem;
   font-size: smaller;
   color: var(--text-muted);
@@ -157,6 +163,7 @@ body > footer {
 .article-tags .article-tags-label {
   display: inline;
   padding: .25rem 0;
+  color: var(--text-muted);
 }
 
 .article-tags > .article-tag {
