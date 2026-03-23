@@ -113,6 +113,8 @@ body.light {
 
 #body-header > menu > li {
   list-style: none;
+  padding: .5rem .75rem;
+  border-radius: .5rem;
 }
 
 #body-header > menu > li:first-child {
@@ -121,6 +123,28 @@ body.light {
 
 #body-header > menu > li:last-child {
   margin-right: auto;
+}
+
+#body-header > menu > li::before {
+  margin-right: .5rem;
+}
+
+#header-menu-blog {
+  background-color: var(--bg-light);
+}
+
+#header-menu-blog::before {
+  content: "✒️";
+}
+
+#header-menu-github {
+  border: 2px solid var(--bg-light);
+}
+
+#header-menu-github::before {
+  font-family: FontAwesome;
+  font-size: larger;
+  content: "\f09b";
 }
 
 #body-content {
